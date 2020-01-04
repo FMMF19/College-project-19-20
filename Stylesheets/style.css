@@ -1,0 +1,403 @@
+
+
+
+/* 16px = 1em; 32px = 2em; itd */
+
+html{
+	font-size: 1em;
+}
+
+body{
+	margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.introBody::after{
+	/* Kreira fiktivni element iza navedene klase, te u njega samo ubacimo sliku. Element ima iste karakteristike kao i element koji nosi klasu, tj onaj kojega referenciramo */
+	content: "";
+	  background: url("../Images/intro.png");
+	  background-size:cover;
+	  opacity: 0.15;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  right: 0;
+	  position: fixed;
+	  z-index: -1;
+}
+
+.newsBody::after{
+	content: "";
+	  background: url("../Images/news.jpg");
+	  background-size:cover;
+	  opacity: 0.15;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  right: 0;
+	  position: fixed;
+	  z-index: -1;
+}
+
+.articleBody::after{
+	content: "";
+	  background: url("../Images/articleBody.jpg");
+	  background-size:cover;
+	  opacity: 0.10;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  right: 0;
+	  position: fixed;
+	  z-index: -1;
+}
+
+.contactBody::after{
+	content: "";
+	  background: url("../Images/contact.jpg");
+	  background-size:cover;
+	  opacity: 0.15;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  right: 0;
+	  position: fixed;
+	  z-index: -1;
+}
+
+.galleryBody::after{
+	content: "";
+	  background: url("../Images/Gallery/Woods.jpg");
+	  background-size:cover;
+	  opacity: 0.15;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  right: 0;
+	  position: fixed;
+	  z-index: -1;
+}
+
+.aboutBody::after{
+	content: "";
+	  background: url("../Images/Gallery/15thAnni.jpg");
+	  background-size:cover;
+	  opacity: 0.15;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  right: 0;
+	  position: fixed;
+	  z-index: -1;
+}
+
+.introMain p{
+	text-align: center;
+}
+
+.aboutMain {
+	text-align: center;
+}
+
+footer{
+	margin: 1em;
+}
+
+ul{
+	list-style-type:none;
+}
+
+h1{
+	text-align: center;
+	margin 0 50% 0 50%; /* top right bottom left */
+}
+
+.currentlyActiveTab{
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #2a14d8 !important; /* important znači da ga uzima prije nego druge stilove */	
+}
+
+.about2nd p:last-child{
+	font-size: 2em;
+	font-weight: 900;
+}
+
+/*--------- Početak stil za galeriju ---------*/
+
+.galleryMain{
+	text-align:center;
+}
+
+	.galleryPhotos figure {
+		text-align:center;
+		margin:2em 2em 2em 2em;
+		width:23.125em;
+		height:12.5em;
+		display:inline-block;
+	}
+
+		.galleryPhotos figure img {
+			width:100%;
+			height:100%;
+		}
+		
+		.galleryPhotos figure img:hover {
+			opacity:0.5;
+		}
+
+/*--------- Kraj stil za galeriju ---------*/
+
+/*--------- Početak stil za kontakt ---------*/
+
+.googleMapsIframe{
+	text-align: center;
+    margin: 3.125em 0 3.125em 0;
+	display:inline-block;
+	width:49%;
+	height:25em;
+}
+
+	.googleMapsIframe iframe{
+		width:100%; 
+		height:100%;
+		border:0;
+	}
+
+.contactForm{
+	/* Referenciranje klase kontejnera koji drži formu i sve njene elemente */
+	text-align:center;
+	margin: 3.125em 0 3.125em 0;
+	display:inline-block;
+	width:49%;
+	height:25em;
+	float:left;
+}
+
+#contactForm{
+	/* Referenciranje id-a same forme */
+}
+
+.tableStyle{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+	.tableStyle tr td:first-child{
+		text-align:left;
+	}
+	
+		.tableStyle tr td input, .tableStyle tr td select{
+			width:100%;
+		}
+
+input[type="submit"]{
+	margin-top: 3.125em;
+}
+
+/*--------- Kraj stil za kontakt ---------*/
+
+/*--------- Početak stil za news ---------*/
+
+.articleContainer div{
+	margin: 1em;
+	padding-bottom: 1.2em;
+	position:relative;
+	width:75%;
+	height:100%;
+}
+
+	.articleContainer div:not(:last-child){
+		/* svi divovi koji su djeca .articleContainer divu osim zadnjeg djeteta */
+		border-bottom: solid 0.15em black;
+	}
+
+		.articleContainer div figure{
+			margin:0;
+			width:40%;
+			height:20%;
+			display: inline-block;
+		}
+			
+			.articleContainer div figure img{
+				width:100%;
+				height:100%;
+			}
+			
+		.articleContainer div h1{
+			font-size: 1.5em;
+			display: inline-block;
+			margin: 0;
+			position:absolute;
+			bottom: 90%;
+			left: 45%;
+			font-weight:normal;
+		}
+		
+			.articleContainer div h1 a{
+				text-decoration:none;
+			}
+			
+				.articleContainer div h1 a:hover{
+					font-weight:900;
+				}
+				
+		.articleContainer div p:not(:last-child){
+			display:inline-block;
+			margin: 0;
+			position:absolute;
+			bottom: 75%;
+			left: 45%;
+		}
+		
+			.articleContainer div p:not(:last-child) a{
+				text-decoration:none;
+				font-weight:normal;
+			}
+				
+				.articleContainer div p:not(:last-child) a:hover{
+					font-weight:900;
+				}
+				
+		.articleContainer div p:last-child{
+			display:inline-block;
+			margin: 0;
+			position:absolute;
+			bottom: 5%;
+			left: 45%;
+		}
+	
+@media all and (max-width: 1200px){
+	.articleContainer div h1{
+			font-size: 1em;
+			bottom: 85%;
+	}
+		
+	.articleContainer div p:not(:last-child){
+			bottom: 50%;
+	}
+}
+
+@media all and (max-width: 700px){
+	.articleContainer div p:not(:last-child){
+		bottom: 20%;
+	}
+}
+
+			/* ----- Početak ARTICLE news ----- */
+
+.articleText{
+	margin: 0 5em 0 3.125em;
+}
+
+			/* ----- Kraj ARTICLE news ----- */
+
+/*--------- Kraj stil za news ---------*/
+
+/*--------- Početak stil za slike ---------*/
+
+.banner{
+	width:100%;
+}
+
+.introFigure{
+	margin:0;
+	text-align:center;
+}
+
+	.introFigure img{
+		width:50%;
+		height:50%;
+		
+	}
+
+.socialNetworkIcon a img{
+	width:2em;
+	height:2em;
+}
+
+			/* ----- Početak ARTICLE slike ----- */
+			
+.articlePhotos{
+	    margin: 4.375em 0 4.375em 3.125em; /*top right bottom left*/
+}
+.articlePhotos figure{
+	display:inline-block;
+	margin: 0 3.125em 0 0;
+	width: 20%;
+	height: 20%;
+	text-align: center;
+}
+
+	.articlePhotos figure img{
+		width:100%;
+		height:100%;
+	}
+	
+@media all and (max-width: 1200px){
+	.articlePhotos{
+		margin-bottom: 1em;
+	}
+}
+
+			/* ----- Kraj ARTICLE slike ----- */
+			
+/*--------- Kraj stil za slike ---------*/
+
+/* --------- Početak stil za navigaciju --------- */
+
+.navigation {
+  margin: 0; 
+  display: flex;
+  justify-content: center;
+  background-color:#f199b7;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: black;
+}
+
+.navigation a:hover {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  
+  .navigation a { 
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+/* --------- Kraj stil za navigaciju --------- */
+
+.copyright:hover{
+	font-size:2em;
+	font-weight:bold;
+	margin:0;
+	cursor:grab;
+}
+
+
